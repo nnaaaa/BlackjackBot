@@ -6,10 +6,10 @@ import { MessageClient } from 'disney.js';
 
 
 class Blackjack extends MessageClient{
-    async play(bet: number) {
+    async bet(betNumber: number) {
         const gameState = new GameState(
             this.message.data.author,
-            bet,
+            betNumber,
             new Deck()
         )
 

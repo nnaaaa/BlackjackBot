@@ -104,10 +104,9 @@ export class GameState {
                 ${MarkdownBuilder.italic(
                     `Response within ${this._overtime / 1000}s`
                 )}\n
-                ${MarkdownBuilder.bold(`${nickname}`)}\n
                 ${MarkdownBuilder.bold('Dealer')}\n
                 ${this._dealerHand.print()}\n
-                ${MarkdownBuilder.bold('Player')}\n
+                ${MarkdownBuilder.bold(`${nickname}`)}\n
                 ${this._playerHand.print()}\n
             `
 
