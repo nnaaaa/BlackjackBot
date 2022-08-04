@@ -1,5 +1,5 @@
 
-import { BotInputMessage, ButtonStyle, MarkdownBuilder, MessageAction, MessageButton,MemberEntity } from 'disney.js'
+import { BotInputMessage, ButtonStyle, MarkdownBuilder, MessageAction, MessageButton,MemberEntity, MessageService } from 'disney.js'
 import {Deck} from './deck'
 import {Hand} from './hand'
 
@@ -17,7 +17,7 @@ export class GameState {
     private _dealerHand: Hand
     private _playerHand: Hand
 
-    private _action!: MessageAction
+    private _message!: MessageService
     /**
      * -2 - Time-up
      * -1 - Lost
@@ -48,8 +48,6 @@ export class GameState {
             .setName('Stand')
             .setCustomId('stand')
         
-        this._action = new MessageAction()
-
         let BlackJack = 21,
             DoubleAce = 22
         let checkPlayer = 1
@@ -79,6 +77,10 @@ export class GameState {
         }
     }
 
+    public setMessage(messageService: MessageService) {
+        this._message = messageService
+    }
+
     public isOver(): boolean {
         return this._result != GameResult.Running
     }
@@ -87,12 +89,12 @@ export class GameState {
     }
 
     public getAction() {
-        this._action.clearButton()
+        this.message.action.clearButton()
     
-        this._action
+        this.message.action
             .addButton(this._actionButtonHit)
             .addButton(this._actionButtonStand)
-        return this._action
+        return this.message.action
     }
 
     public getContent(): string {
@@ -252,7 +254,7 @@ export class GameState {
         return this._overtime
     }
 
-    public get action() {
-        return this._action
+    public get message() {
+        return this._message
     }
 }

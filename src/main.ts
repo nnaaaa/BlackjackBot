@@ -12,18 +12,22 @@ class Blackjack extends MessageClient{
             betNumber,
             new Deck()
         )
+        gameState.setMessage(this.message)
 
         const message = await this.message.send(gameState.getMessage())
 
-        gameState.action.onButtonClick(async (button) => {
-            if (button.customId === 'hit') {
+        gameState.setMessage(message)
+
+        gameState.message.action.onButtonClick(async (interaction) => {
+            if (interaction.button.customId === 'hit') {
                 gameState.hit()
             }
-            if (button.customId === 'stand') {
+            if (interaction.button.customId === 'stand') {
                 gameState.stand()
             }
 
-            message.edit(gameState.getMessage())
+            const editedMessage = await message.edit(gameState.getMessage())
+            gameState.setMessage(editedMessage)
             if (gameState.isOver()) {
                 console.log("game over")
             }
