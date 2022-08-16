@@ -15,7 +15,7 @@
     "tslib": "^2.4.0"
   },
   "dependencies": {
-    "disney.js": "^0.2.0",
+    "disney.js": "^0.2.1",
     "typescript": "^4.7.4"
   }
 }

@@ -182,10 +182,10 @@ diff@^4.0.1:
   resolved "https://registry.yarnpkg.com/diff/-/diff-4.0.2.tgz#60f3aecb89d5fae520c11aa19efc2bb982aade7d"
   integrity sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==
 
-disney.js@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/disney.js/-/disney.js-0.2.0.tgz#6666e319165d5af972bd46380c5c59985bf11e2b"
-  integrity sha512-vvfRnvAMLEAFBN14KR7fiXSF35N/q1tZ6Wh5Xt4jlxVrGvPtdTMmaQsY75Du+E0DkUAkD7PdKmrgNYGYae9ZOQ==
+disney.js@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/disney.js/-/disney.js-0.2.1.tgz#25b18322562a7bc74f90e403777d2ed1ee2944cb"
+  integrity sha512-kulYbZV9bTA0DO56/Q0ONmFQOe4cPf+j2p76TbGsOT2FfoSu527gtN0rADeAJqwKNvs6oqRZSZgdWO+thBNubA==
   dependencies:
     axios "^0.27.2"
     common-tags "^1.8.2"

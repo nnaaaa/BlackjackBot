@@ -37,5 +37,5 @@ class Blackjack extends MessageClient{
 
 const client = new Blackjack()
 
-client.login('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJib3RJZCI6Ijg4MjQwZTA2LWMyYzMtNDY4ZS04MGI4LTZiNmMxYjk5YmI4OCIsImlhdCI6MTY1ODMyMDE0OH0.KBc0W91UxsHGfQhzwJplIZ3dAL_YQm7DKgdXi3fca-Q');
+client.login('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJib3RJZCI6IjVkMDk1N2I4LWE0ODMtNDFiNy1hNWEzLTJjNTg4OWZiNzVhMCIsImlhdCI6MTY2MDQ4MDU4MH0.WHTgo5rEW18hdxhM_VnQY5oUr4yTFqIBv-0_0P__7RQ');
 
